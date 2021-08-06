@@ -1,38 +1,87 @@
 .App {
-  text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-image: url(assets/anh1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#form-list {
+    position: relative;
+    background: linear-gradient(23deg, rgba(157, 160, 177, 1) 0%, rgba(46, 8, 16, 1) 100%);
+    height: 500px;
+    width: 400px;
+    border-radius: 2%;
+    border: 3px solid #110205;
+    margin-top: 12%;
+    z-index: 2;
+    overflow: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#btn-them {
+    color: rgb(218, 207, 207);
+    font-weight: 100px;
+    background-color: rgb(61, 59, 59);
+    border: 1px solid #c0b9bb;
 }
 
-.App-link {
-  color: #61dafb;
+.form-item {
+    height: 100px;
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item {
+    height: 40px;
+    display: flex;
+    flex-direction: col;
+    padding: 2px 4px;
+    justify-content: space-between;
+    border: 1px solid #c0b9bb;
+    background-color: rgb(141, 61, 61);
+    align-items: center;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+}
+
+.plan {
+    font-size: 15px;
+    font-weight: 480;
+}
+
+.icon {
+    font-size: 25px;
+}
+
+#btn-delete:hover {
+    color: rgb(173, 32, 32);
+}
+
+#btn-edit:hover {
+    color: rgb(8, 138, 25);
+}
+
+#title {
+    color: #c0b9bb;
+}
+
+#total {
+    position: relative;
+    top: -20px;
 }
